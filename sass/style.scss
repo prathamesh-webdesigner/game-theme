@@ -1,0 +1,267 @@
+@import "var";
+@import "common";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+.social_Media a i {
+  font-size: 2rem;
+  color: #7d7d7d;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.navbar_area {
+  background-color: $bluebg;
+  color: #fff;
+}
+
+.menu_area {
+  display: flex;
+  align-items: center;
+}
+
+.logo_img img {
+  width: 45%;
+}
+
+.hamburger {
+  width: 5%;
+}
+
+.hamburger a i {
+  color: #fff;
+  font-size: 1.8rem;
+  margin-right: $marginRight;
+}
+
+.signIn_signUp {
+  width: 12%;
+  margin-right: $marginRight;
+}
+
+.cart {
+  width: 5%;
+}
+
+.serach_area {
+  width: 53%;
+  margin-right: $marginRight;
+  input {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 9px 10px;
+    outline: none;
+  }
+}
+
+.Media {
+  margin-right: 35px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.about1 {
+  background: $boxBackgroundImage_box1;
+  @include boxCommonCode;
+  @include BoxAreaChildCode;
+}
+.about2 {
+  background: $boxBackgroundImage_box2;
+  @include boxCommonCode;
+  @include BoxAreaChildCode;
+}
+.about3 {
+  background: $boxBackgroundImage_box3;
+  @include boxCommonCode;
+  @include BoxAreaChildCode;
+}
+.featured_game1 {
+  background-image: $featured_game1;
+  @include featuredGame;
+}
+.featured_game2 {
+  background-image: $featured_game2;
+  @include featuredGame;
+}
+.featured_game3 {
+  background-image: $featured_game3;
+  @include featuredGame;
+}
+.featured_heading {
+  font-family: fantasy;
+}
+.featured_heading span {
+  color: $yellowColor;
+}
+.featuredGame_section {
+  margin-top: 5rem;
+}
+footer {
+  background-color: #26272b;
+  color: #fff;
+}
+.feature_content {
+  h2 {
+    font-family: $fontFamilyForBold;
+    color: #fff;
+  }
+  small {
+    color: #fff;
+  }
+  i {
+    color: $yellowColor;
+  }
+}
+.game_name {
+  font-family: $fontFamilyForBold;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.blog1 img {
+  width: 100%;
+}
+.blog1 i {
+  font-size: 18px;
+  margin-right: 8px;
+  color: #a8a5a5;
+}
+.blog1 h2 {
+  font-family: $fontFamilyForBold;
+  margin: 20px 0;
+}
+.blog_icon div {
+  margin-right: 15px;
+}
+// banner
+.banner_carousel_image {
+  background-image: $banner_images;
+  @include banner_img;
+}
+.banner_carousel_image2 {
+  background-image: $banner_images2;
+  @include banner_img;
+}
+.banner_carousel_image3 {
+  background-image: $banner_images;
+  @include banner_img;
+}
+.banner_content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  h1 {
+    font-family: $fontFamilyForBold;
+  }
+}
+/* Sweep To Bottom */
+.hvr-sweep-to-bottom {
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.hvr-sweep-to-bottom:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ffc31173;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  cursor: pointer;
+}
+//   .hvr-sweep-to-bottom:hover, .hvr-sweep-to-bottom:focus, .hvr-sweep-to-bottom:active {
+//     color: white;
+//   }
+.hvr-sweep-to-bottom:hover:before,
+.hvr-sweep-to-bottom:focus:before,
+.hvr-sweep-to-bottom:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+}
+
+// Media query
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .menus_nav {
+    display: flex;
+    flex-direction: column;
+    background: beige;
+    padding: 20px 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+  }
+  .Media {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+  }
+  .social_media_group {
+    justify-content: center !important;
+    margin: 20px 0 10px 0;
+  }
+  .banner_carousel_image,
+  .banner_carousel_image2,
+  .banner_carousel_image3 {
+    @include backgroundSizeConten;
+  }
+  .about2 {
+    margin: 20px 0;
+  }
+  .logo_img img {
+    width: 25% !important;
+}
+
+}
+
+// tab
+@media only screen and (max-width: 800px) {
+  .menus_nav {
+    display: flex;
+    flex-direction: column;
+    background: beige;
+    padding: 20px 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+  }
+  .Media {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+  }
+  .social_media_group {
+    justify-content: center !important;
+    margin: 20px 0 10px 0;
+  }
+  .handBurger {
+    position: absolute;
+    right: 40px;
+  }
+  .logo_img img {
+    width: 95%;
+}
+.about1, .about2, .about3{padding: 10px;}
+}
