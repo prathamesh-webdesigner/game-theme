@@ -8,6 +8,9 @@
 li {
   list-style: none;
 }
+a{
+  text-decoration: none;
+}
 .social_Media a i {
   font-size: 2rem;
   color: #7d7d7d;
@@ -234,8 +237,7 @@ footer {
   }
   .logo_img img {
     width: 25% !important;
-}
-
+  }
 }
 
 // tab
@@ -262,6 +264,73 @@ footer {
   }
   .logo_img img {
     width: 95%;
+  }
+  .about1,
+  .about2,
+  .about3 {
+    padding: 10px;
+  }
 }
-.about1, .about2, .about3{padding: 10px;}
+
+.about_game::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.about_game::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+/* Handle */
+.about_game::-webkit-scrollbar-thumb {
+  background: #ffc311;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.about_game::-webkit-scrollbar-thumb:hover {
+  background: rgb(112, 112, 112);
+  border-radius: 10px;
+}
+
+.about_game {
+  height: 10vh;
+  overflow-y: auto;
+}
+.related_game_article img {
+  width: 100%;
+}
+.related_game_article {
+  cursor: pointer;
+}
+.related_game_article:hover img {
+  opacity: 1;
+}
+// description page
+.blog_text h1,
+.blog_text h2 {
+  font-family: fantasy;
+}
+.blog_text p {
+  text-align: justify;
+}
+.sideBar {
+  background-color: #f8f8f8;
+  margin-top: 3.5rem;
+}
+.recommended {
+  background: $yellowColor;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  height: 6vh;
+  align-items: center;
+}
+.sideBar_imgGrp {
+  width: 90%;
+  margin: 0 auto;
+}
+.sideBar_imgGrp img {
+  width: 100%;
 }
